@@ -2,7 +2,7 @@ clc
 clear all
 close all
 
-pathData='k6mf_processed_FD2.txt';
+pathData='k10mf_processed_FD2.txt';
 Fs=20000;
 
 %Opening the file
@@ -102,10 +102,12 @@ corrTLNorm=corrTL./max(corrTL);
 figure()
 plot(xr(1:100),corrTLNorm(1:100))
 hold on
-
+%%
 % Parabolic fit
 % Fit will be done for the first 8 values...
 p1=polyfit(xr(1:8), corrTLNorm(1:8), 2);
+
+%%
 zG=polyval(p1,xr(1:30));
 
 plot(xr(1:30),zG)
