@@ -144,7 +144,7 @@ xlabel('$r$ [m]', 'interpreter','latex')
 ylabel('$S_n $ [a.u]','interpreter','latex')
 legend('show','interpreter', 'latex')
 
-rlow=find(rVect_reduced>TaylorLength,1,'first');
+rlow=find(rVect_reduced>TaylorLength2,1,'first');
 rhigh=find(rVect_reduced>int_L1,1,'first');
 
 p1=polyfit(log(rVect_reduced(rlow:rhigh)), log(Sn2(rlow:rhigh)),1);
