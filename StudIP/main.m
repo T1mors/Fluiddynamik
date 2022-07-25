@@ -308,7 +308,7 @@ eta=(visc^3/e_mean_deriv)^0.25
 TaylorLength2=sqrt(15*visc/e_mean_deriv)*std(data);
 
 rlow=find(rVect_reduced>eta,1,'first');
-rhigh=find(rVect_reduced>TaylorLength,1,'first');
+rhigh=find(rVect_reduced>TaylorLength2,1,'first');
 
 % From S3
 figure()
